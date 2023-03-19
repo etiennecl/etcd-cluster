@@ -1,0 +1,68 @@
+{
+    "$id": "clinia://etcd-cluster-config",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Etcd Cluster Config",
+    "description": "Etcd Cluster Config",
+    "type": "object",
+    "properties": {
+        "transport": {
+            "type": "object",
+            "properties": {
+                "port": {
+                    "type": "integer",
+                    "description": "The port to bind for communication between nodes"
+                }
+            },
+            "required": [
+                "port"
+            ]
+        },
+        "node": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Node name"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "cluster": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Cluster name"
+                },
+                "initial_master_nodes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Initial master nodes"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "discovery": {
+            "type": "object",
+            "properties": {
+                "seed_hosts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Seed hosts"
+                }
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "node"
+    ]
+}

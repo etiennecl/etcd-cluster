@@ -1,0 +1,13 @@
+transport:
+  port: 9300
+node:
+  name: ca01
+cluster:
+  name: local
+  # initial_master_nodes: 
+  #   - ca01
+  #   - ca02
+  #   - ca03
+# discovery:
+#   seed_hosts:
+#     - 127.0.0.1

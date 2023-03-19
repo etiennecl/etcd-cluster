@@ -1,0 +1,9 @@
+transport:
+  port: 9302
+node:
+  name: ca02
+cluster:
+  name: local
+  # initial_master_nodes: [ca01,ca02,ca03]
+# discovery:
+#   seed_hosts: [ca01, ca03]
