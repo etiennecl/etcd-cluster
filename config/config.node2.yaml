@@ -1,5 +1,5 @@
 transport:
-  port: 9302
+  port: 2302
 node:
   name: ca02
 cluster:

@@ -143,7 +143,7 @@ func (k *Config) Discovery() *Discovery {
 
 func (k *Config) Transport() *Transport {
 	return &Transport{
-		Port: k.p.IntF("transport.port", 9300),
+		Port: k.p.IntF("transport.port", 2300),
 	}
 }
 

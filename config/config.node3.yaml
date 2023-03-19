@@ -1,5 +1,5 @@
-# transport:
-#   port: 9304
+transport:
+  port: 2304
 node:
   name: ca03
 cluster:

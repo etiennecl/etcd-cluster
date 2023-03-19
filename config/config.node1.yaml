@@ -1,5 +1,5 @@
 transport:
-  port: 9300
+  port: 2300
 node:
   name: ca01
 cluster:

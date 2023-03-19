@@ -169,13 +169,13 @@ func (n *Node) Discover(ctx context.Context) []NodeConfig {
 	nodes := []NodeConfig{}
 
 	// By defauly without additional configuration, a node will bind to the available loopback addresses
-	// and scan ports 9300,9302,9304,9306,9308 for peer communication and 9301,9303,9305,9307,9309 for client communication.
+	// and scan ports 2300,2302,2304,2306,2308 for peer communication and 2301,2303,2305,2307,2309 for client communication.
 	for _, u := range []struct{ peer, client int }{
-		{9300, 9301},
-		{9302, 9303},
-		{9304, 9305},
-		{9306, 9307},
-		{9308, 9309},
+		{2300, 2301},
+		{2302, 2303},
+		{2304, 2305},
+		{2306, 2307},
+		{2308, 2309},
 	} {
 		for _, h := range n.d.Config(ctx).Discovery().SeedHosts {
 			// If the host is listening on the peer port and the client port, it is a node
